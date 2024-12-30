@@ -72,5 +72,5 @@ The configuration is saved in the `EditorSettings` configuration file on your sy
 
 # Source Code and License
 
-The source code is licensed under the MIT license and is hosted at <https://github.com/sirjofri/SlateIconBrowser>.
-See also the [License.txt](https://github.com/sirjofri/SlateIconBrowser/blob/master/License.txt) file inside the repository for the full license text.
+The source code is licensed under the MIT license and is hosted at <https://github.com/sirjofri/SlateStyleBrowser>.
+See also the [License.txt](https://github.com/sirjofri/SlateStyleBrowser/blob/master/License.txt) file inside the repository for the full license text.
