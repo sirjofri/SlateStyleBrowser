@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class SlateIconBrowser : ModuleRules
+public class SlateStyleBrowser : ModuleRules
 {
-	public SlateIconBrowser(ReadOnlyTargetRules Target) : base(Target)
+	public SlateStyleBrowser(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
@@ -26,6 +26,7 @@ public class SlateIconBrowser : ModuleRules
 			new string[]
 			{
 				"Core",
+				"DeveloperSettings",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
@@ -49,6 +50,7 @@ public class SlateIconBrowser : ModuleRules
 				"EditorStyle",
 				"ApplicationCore",
 				"WorkspaceMenuStructure",
+				"WidgetCarousel",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

@@ -1,6 +1,6 @@
 ﻿// Copyright 2022 sirjofri. Licensed under MIT license. See License.txt for full license text.
 
-#include "SlateIconBrowserStyle.h"
+#include "SlateStyleBrowserStyle.h"
 #include "Styling/SlateStyleRegistry.h"
 #include "Framework/Application/SlateApplication.h"
 #include "Slate/SlateGameResources.h"
@@ -15,9 +15,9 @@
 
 
 
-TSharedPtr<FSlateStyleSet> FSlateIconBrowserStyle::StyleInstance = nullptr;
+TSharedPtr<FSlateStyleSet> FSlateStyleBrowserStyle::StyleInstance = nullptr;
 
-void FSlateIconBrowserStyle::Initialize()
+void FSlateStyleBrowserStyle::Initialize()
 {
 	if (!StyleInstance.IsValid())
 	{
@@ -26,36 +26,36 @@ void FSlateIconBrowserStyle::Initialize()
 	}
 }
 
-void FSlateIconBrowserStyle::Shutdown()
+void FSlateStyleBrowserStyle::Shutdown()
 {
 	FSlateStyleRegistry::UnRegisterSlateStyle(*StyleInstance);
 	ensure(StyleInstance.IsUnique());
 	StyleInstance.Reset();
 }
 
-FName FSlateIconBrowserStyle::GetStyleSetName()
+FName FSlateStyleBrowserStyle::GetStyleSetName()
 {
-	static FName StyleSetName(TEXT("SlateIconBrowserStyle"));
+	static FName StyleSetName(TEXT("SlateStyleBrowserStyle"));
 	return StyleSetName;
 }
 
 const FVector2D Icon16x16(16.0f, 16.0f);
 const FVector2D Icon20x20(20.0f, 20.0f);
 
-TSharedRef< FSlateStyleSet > FSlateIconBrowserStyle::Create()
+TSharedRef< FSlateStyleSet > FSlateStyleBrowserStyle::Create()
 {
-	TSharedRef< FSlateStyleSet > Style = MakeShareable(new FSlateStyleSet("SlateIconBrowserStyle"));
-	Style->SetContentRoot(IPluginManager::Get().FindPlugin("SlateIconBrowser")->GetBaseDir() / TEXT("Resources"));
+	TSharedRef< FSlateStyleSet > Style = MakeShareable(new FSlateStyleSet("SlateStyleBrowserStyle"));
+	Style->SetContentRoot(IPluginManager::Get().FindPlugin("SlateStyleBrowser")->GetBaseDir() / TEXT("Resources"));
 
 #if ENGINE_MAJOR_VERSION == 5
-	Style->Set("SlateIconBrowser.Icon", new IMAGE_BRUSH_SVG(TEXT("Icon"), Icon20x20));
+	Style->Set("SlateStyleBrowser.Icon", new IMAGE_BRUSH_SVG(TEXT("Icon"), Icon20x20));
 #else
-	Style->Set("SlateIconBrowser.Icon", new IMAGE_BRUSH(TEXT("Icon128"), Icon20x20));
+	Style->Set("SlateStyleBrowser.Icon", new IMAGE_BRUSH(TEXT("Icon128"), Icon20x20));
 #endif
 	return Style;
 }
 
-void FSlateIconBrowserStyle::ReloadTextures()
+void FSlateStyleBrowserStyle::ReloadTextures()
 {
 	if (FSlateApplication::IsInitialized())
 	{
@@ -63,7 +63,7 @@ void FSlateIconBrowserStyle::ReloadTextures()
 	}
 }
 
-const ISlateStyle& FSlateIconBrowserStyle::Get()
+const ISlateStyle& FSlateStyleBrowserStyle::Get()
 {
 	return *StyleInstance;
 }
