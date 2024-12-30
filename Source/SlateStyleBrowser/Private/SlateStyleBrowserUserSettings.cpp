@@ -26,8 +26,7 @@ void USlateStyleBrowserUserSettings::PostInitProperties()
 {
 	Super::PostInitProperties();
 
-	FConfigFile* file = GConfig->Find(GetConfigFilename(this));
-	if (!file || !file->DoesSectionExist(TEXT("/Script/SlateIconBrowser.SlateStyleBrowserUserSettings"))) {
+	if (!GConfig->DoesSectionExist(TEXT("/Script/SlateStyleBrowser.SlateStyleBrowserUserSettings"), GetConfigFilename(this))) {
 		FillWithDefaultStyles();
 		FillWithDefaultReplacements();
 		SaveConfig();
