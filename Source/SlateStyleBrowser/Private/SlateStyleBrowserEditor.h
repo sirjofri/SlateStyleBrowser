@@ -1,7 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "SlateStyleData.h"
+#include "Runtime/Launch/Resources/Version.h"
+#if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION > 1
 #include "Engine/TimerHandle.h"
+#else
+#include "Engine/EngineTypes.h"
+#endif
 #include "Widgets/SCompoundWidget.h"
 #include "Widgets/Input/SComboBox.h"
 #include "Widgets/Views/SListView.h"
