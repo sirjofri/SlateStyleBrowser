@@ -1,7 +1,19 @@
 #pragma once
-#include "SlateStyleBrowserUserSettings.h"
+#include "CoreMinimal.h"
 #include "SlateStyleData.h"
+#include "Engine/TimerHandle.h"
+#include "Widgets/SCompoundWidget.h"
+#include "Widgets/Input/SComboBox.h"
+#include "Widgets/Views/SListView.h"
 
+class FTabManager;
+class USlateStyleBrowserUserSettings;
+class STableViewBase;
+class FSlateStyleData;
+class ITableRow;
+class FMenuBarBuilder;
+class FMenuBuilder;
+class SDockTab;
 class ISlateStyleDataManager;
 class STypeFilterWidget;
 

@@ -17,6 +17,7 @@
 #include "SlateStyleWidgetSpinBox.h"
 #include "SlateStyleWidgetSplitter.h"
 #include "Interfaces/IPluginManager.h"
+#include "Misc/ConfigCacheIni.h"
 
 #define DEFTYPES(OP) \
 	OP(Button, FButtonStyle) \

@@ -1,4 +1,5 @@
 #include "TypeFilterWidget.h"
+#include "Runtime/Launch/Resources/Version.h"
 
 #if ENGINE_MAJOR_VERSION == 4
 #define EDITOR_STYLE_SAFE() FEditorStyle

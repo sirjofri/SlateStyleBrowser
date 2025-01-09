@@ -4,6 +4,7 @@
 #include "SlateStyleBrowser/Public/SlateStyleDataManager.h"
 
 class ISlateStyleDataProvider;
+class ISlateStyle;
 
 class FSlateStyleDataManager : public ISlateStyleDataManager
 {

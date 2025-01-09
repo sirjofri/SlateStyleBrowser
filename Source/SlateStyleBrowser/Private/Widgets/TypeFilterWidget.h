@@ -1,4 +1,9 @@
 #pragma once
+#include "CoreMinimal.h"
+#include "Widgets/SCompoundWidget.h"
+#include "Widgets/Input/SComboBox.h"
+
+enum class ECheckBoxState : uint8;
 
 class STypeFilterWidget : public SCompoundWidget
 {

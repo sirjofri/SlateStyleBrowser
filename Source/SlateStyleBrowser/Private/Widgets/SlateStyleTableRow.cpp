@@ -1,6 +1,10 @@
 #include "SlateStyleTableRow.h"
 
 #include "SlateStyleData.h"
+#include "Widgets/Layout/SSpacer.h"
+#include "Widgets/Text/STextBlock.h"
+#include "Widgets/Views/SListView.h"
+#include "Runtime/Launch/Resources/Version.h"
 
 #define LOCTEXT_NAMESPACE "SlateStyleBrowser"
 

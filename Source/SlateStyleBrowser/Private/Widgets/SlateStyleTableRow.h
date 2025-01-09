@@ -1,4 +1,7 @@
 #pragma once
+#include "CoreMinimal.h"
+#include "Widgets/SToolTip.h"
+#include "Widgets/Views/STableRow.h"
 
 class FSlateStyleData;
 

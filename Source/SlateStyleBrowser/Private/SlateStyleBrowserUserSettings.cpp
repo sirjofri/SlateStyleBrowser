@@ -1,6 +1,7 @@
 #include "SlateStyleBrowserUserSettings.h"
 
 #include "SlateStyleBrowser.h"
+#include "Misc/ConfigCacheIni.h"
 
 
 USlateStyleBrowserUserSettings::USlateStyleBrowserUserSettings()

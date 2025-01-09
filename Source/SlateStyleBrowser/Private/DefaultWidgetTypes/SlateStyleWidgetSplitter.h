@@ -1,5 +1,7 @@
 #pragma once
+#include "CoreMinimal.h"
 #include "SlateStyleData.h"
+#include "Runtime/Launch/Resources/Version.h"
 
 class FSlateStyleWidgetSplitter : public FSlateStyleData
 {
