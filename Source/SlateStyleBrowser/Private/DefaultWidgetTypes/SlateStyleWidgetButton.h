@@ -1,5 +1,8 @@
 #pragma once
+#include "CoreMinimal.h"
+#include "SlateStyleBrowserEditor.h"
 #include "SlateStyleData.h"
+#include "Widgets/Input/SButton.h"
 
 #define LOCTEXT_NAMESPACE "SlateStyleBrowser"
 

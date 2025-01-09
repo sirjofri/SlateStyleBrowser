@@ -3,6 +3,7 @@
 
 #include "SlateStyleDataManager.h"
 
+#include "Styling/ISlateStyle.h"
 #include "SlateStyleData.h"
 
 void FSlateStyleDataManager::RegisterWidgetStyleProvider(

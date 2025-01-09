@@ -1,4 +1,5 @@
 #pragma once
+#include "CoreMinimal.h"
 #include "SlateStyleData.h"
 
 class FSlateStyleWidgetComboButton : public FSlateStyleData

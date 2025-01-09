@@ -1,5 +1,7 @@
 #pragma once
+#include "CoreMinimal.h"
 #include "SlateStyleData.h"
+#include "Widgets/Input/SEditableText.h"
 
 class FSlateStyleWidgetEditableText : public FSlateStyleData
 {

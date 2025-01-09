@@ -2,6 +2,14 @@
 
 #pragma once
 
+#include "CoreMinimal.h"
+#include "Styling/ISlateStyle.h"
+
+struct FMargin;
+class ISlateStyle;
+class FMenuBuilder;
+class SWidget;
+
 enum EDefaultCopyStyle
 {
 	DCS_FirstEntry,
@@ -29,7 +37,7 @@ public:
 	
 	virtual ~FSlateStyleData() = default;
 
-	virtual void Initialize(FName InStyle, FName InPropertyName, FName InType, FName InWidgetStyleType);;
+	virtual void Initialize(FName InStyle, FName InPropertyName, FName InType, FName InWidgetStyleType);
 	
 	virtual FName GetStyleSetName() { return StyleSetName;};
 	virtual FName GetPropertyName() { return PropertyName; };
@@ -58,22 +66,11 @@ protected:
 	 * @return true if the widget style exists (success)
 	 */
 	template<typename T>
-	const T* GetWidgetStyle()
-	{
-		const ISlateStyle* Style = GetSlateStyle();
-		if (!(Style && Style->HasWidgetStyle<T>(GetPropertyName()))) {
-			return nullptr;
-		}
-		return &GetSlateStyle()->GetWidgetStyle<T>(GetPropertyName());
-	};
+	const T* GetWidgetStyle();;
 
 	// Helper function to get the string value for the specified Enum type
 	template<typename T>
-	static FString GetEnumValue(T Value)
-	{
-		UEnum* Enum = StaticEnum<T>();
-		return Enum->GetNameStringByValue((int64)Value);
-	}
+	static FString GetEnumValue(T Value);
 
 	// Add detail by name and value
 	void AddDetail(const FString& Name, const FString& Value);
@@ -82,12 +79,7 @@ protected:
 
 	// Automatically fill all the details with the properties in the template struct
 	template<typename T>
-	void FillDetailsWithProperties()
-	{
-		const T* ws = GetWidgetStyle<T>();
-		if (ws)
-			FillDetailsInternal(T::StaticStruct(), ws, 0);
-	};
+	void FillDetailsWithProperties();;
 
 protected:
 	// generate string for FMargin struct
@@ -118,3 +110,26 @@ public:
 	virtual TArray<FName> GetSupportedWidgetTypes() = 0;
 	virtual TArray<FString> GetDefaultCopyStyles(FName WidgetType) { return {}; };
 };
+
+template <typename T>
+const T* FSlateStyleData::GetWidgetStyle() {
+	const ISlateStyle* Style = GetSlateStyle();
+	if (!(Style && Style->HasWidgetStyle<T>(GetPropertyName()))) {
+		return nullptr;
+	}
+	return &GetSlateStyle()->GetWidgetStyle<T>(GetPropertyName());
+}
+
+template <typename T>
+FString FSlateStyleData::GetEnumValue(T Value) {
+	UEnum* Enum = StaticEnum<T>();
+	return Enum->GetNameStringByValue((int64)Value);
+}
+
+template <typename T>
+void FSlateStyleData::FillDetailsWithProperties() {
+	const T* ws = GetWidgetStyle<T>();
+	if (ws)
+		FillDetailsInternal(T::StaticStruct(), ws, 0);
+}
+

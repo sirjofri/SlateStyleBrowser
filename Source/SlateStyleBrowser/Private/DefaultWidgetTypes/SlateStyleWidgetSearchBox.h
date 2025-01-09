@@ -1,4 +1,5 @@
 #pragma once
+#include "CoreMinimal.h"
 #include "SlateStyleData.h"
 #include "Widgets/Input/SSearchBox.h"
 

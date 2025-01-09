@@ -1,5 +1,8 @@
 #pragma once
 
+#include "CoreMinimal.h"
+
+class ISlateStyle;
 class FSlateStyleData;
 class ISlateStyleDataProvider;
 

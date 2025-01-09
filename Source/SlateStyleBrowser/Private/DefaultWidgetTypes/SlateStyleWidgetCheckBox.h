@@ -1,5 +1,7 @@
 #pragma once
+#include "CoreMinimal.h"
 #include "SlateStyleData.h"
+#include "Widgets/Input/SCheckBox.h"
 
 class FSlateStyleWidgetCheckBox : public FSlateStyleData
 {

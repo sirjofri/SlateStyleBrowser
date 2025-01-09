@@ -1,4 +1,5 @@
 #pragma once
+#include "CoreMinimal.h"
 #include "SCarouselNavigationBar.h"
 #include "SCarouselNavigationButton.h"
 #include "SlateStyleData.h"

@@ -1,11 +1,13 @@
 #include "SlateStyleData.h"
 
 #include "SlateStyleBrowserUserSettings.h"
+#include "Framework/MultiBox/MultiBoxBuilder.h"
 #include "Framework/Notifications/NotificationManager.h"
 #include "Widgets/Notifications/SNotificationList.h"
 #include "HAL/PlatformApplicationMisc.h"
 #include "Styling/SlateStyleRegistry.h"
 #include "UObject/PropertyIterator.h"
+#include "Runtime/Launch/Resources/Version.h"
 
 #define LOCTEXT_NAMESPACE "SlateStyleBrowser"
 

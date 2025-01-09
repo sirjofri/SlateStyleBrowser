@@ -1,13 +1,18 @@
 #include "SlateStyleBrowserEditor.h"
 
+#include "Editor.h"
 #include "SlateStyleBrowserHacker.h"
 #include "SlateStyleBrowserUserSettings.h"
 #include "DefaultWidgetTypes/SlateStyleBrush.h"
 #include "SlateStyleData.h"
 #include "SlateStyleDataManager.h"
+#include "Framework/Docking/TabManager.h"
+#include "Framework/MultiBox/MultiBoxBuilder.h"
 #include "Styling/SlateStyleRegistry.h"
 #include "Widgets/SlateStyleTableRow.h"
 #include "Widgets/TypeFilterWidget.h"
+#include "Widgets/Input/SEditableTextBox.h"
+#include "Widgets/Layout/SSeparator.h"
 
 #if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION < 3
 #include "Widgets/Layout/SSeparator.h"
