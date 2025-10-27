@@ -34,11 +34,6 @@ public:
 	{
 		FillDetailsWithProperties<FTableRowStyle>();
 	};
-
-	virtual void InitializePreview() override
-	{
-		ExtendedPreview = SNullWidget::NullWidget;
-	};
 	
 private:
 	TSharedRef<ITableRow> GenerateRowWidget(TSharedPtr<FString> InItem, const TSharedRef<STableViewBase>& OwnerTable)
