@@ -16,6 +16,7 @@
 #include "SlateStyleWidgetSlider.h"
 #include "SlateStyleWidgetSpinBox.h"
 #include "SlateStyleWidgetSplitter.h"
+#include "SlateStyleWidgetTableRow.h"
 #include "Interfaces/IPluginManager.h"
 #include "Misc/ConfigCacheIni.h"
 
@@ -35,6 +36,7 @@
 	OP(SpinBox, FSpinBoxStyle) \
 	OP(Splitter, FSplitterStyle) \
 	OP(TextBlock, FTextBlockStyle) \
+	OP(TableRow, FTableRowStyle) \
 	OP(CarouselNavigationButton, FWidgetCarouselNavigationButtonStyle) \
 	OP(CarouselNavigationBar, FWidgetCarouselNavigationBarStyle) \
 
