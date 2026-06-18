@@ -434,7 +434,7 @@ void SSlateStyleBrowserEditor::InputTextChanged(const FText& Text)
 	{
 		UpdateList();
 		FilterStringChangedTimer.Invalidate();
-	}, 0.1, false);
+	}, 0.1f, false);
 }
 
 TSharedPtr<FSlateStyleData> SSlateStyleBrowserEditor::MakeSlateStyleData(const ISlateStyle* SlateStyle, FName Style,

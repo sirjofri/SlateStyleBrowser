@@ -19,9 +19,9 @@ public:
 		sb->SetOnUserScrolled(FOnUserScrolled::CreateLambda([&](float f, TSharedPtr<SScrollBar> sbar)
 		{
 			if (sbar.IsValid())
-				sbar->SetState(f, .2);
+				sbar->SetState(f, .2f);
 		}, sb));
-		sb->SetState(.7, .2);
+		sb->SetState(.7f, .2f);
 
 		return sb.ToSharedRef();
 	};
